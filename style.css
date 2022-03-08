@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* ###############################
+color schemes
+#################################
+ */
+
+ :root {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    
+    --text-light: #000;
+    --bkg-light: #fff;
+    --accent-light: #7606ec6c;
+
+    --text-dark: #fff;
+    --bkg-dark: #000;
+    --accent-dark: #bf85fd;
+ }
+
+  @media(prefers-color-scheme: dark){
+    :root {
+      --text: var(--text-dark);
+      --bkg: var(--bkg-dark);
+      --accent: var(--accent-dark);
+    }
+  }
+  @media(prefers-color-scheme: light){
+    :root {
+      --text: var(--text-light);
+      --bkg: var(--bkg-light);
+      --accent: var(--accent-light);
+
+    }
+  }
+
+
+
+  [color-scheme="dark"] {
+    --text: var(--text-dark);
+    --bkg: var(--bkg-dark);
+    --accent: var(--accent-dark);
+  }
+  
+  [color-scheme="light"] {
+    --text: var(--text-light);
+    --bkg: var(--bkg-light);
+    --accent: var(--accent-light);
+  }
+
+
+/* ###############################
+ initialization rules
+#################################
+ */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bkg);
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    color: var(--text);
+}
+/* ###############################
+Font VALUES
+#################################
+ */
+
+ h6 {
+     font-size: 1rem;
+     font-weight: 200;
+ }
+
+ h1 {
+     font-size: 3rem;
+     font-weight: 700;
+ }
+
+ h2 {
+     font-size: 2rem;
+     font-weight: 500;
+ }
+
+ p {
+     font-weight: 100;
+ }
+
+/* ###############################
+main content
+#################################
+ */
+nav {
+    margin: 0 auto;
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 1px #fff;
+    align-items: center;
+}
+
+nav img {
+    width: 7rem;
+}
+
+.theme {
+    background-color: var(--text);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid var(--bkg);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+  
+  .theme:hover,
+   .theme:focus {
+    background-color: var(--accent);
+    opacity: .8;
+  }
+
+
+nav i {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+
+header  {
+    width: 70%;
+    padding-top: 2rem;
+    margin: 0 auto;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    min-height:  calc(70vh - 10px);
+    text-align: center;
+
+
+
+}
+
+
+footer {
+    font-size: 1.6rem;
+    height: 4rem;
+    margin-top: 2rem;
+    background-color: var(--accent) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+
+
+.bkg--stroke {
+    stroke: var(--bkg);
+  }
